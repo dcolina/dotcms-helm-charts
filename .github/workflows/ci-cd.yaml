@@ -17,11 +17,11 @@ jobs:
   validate-pr:
     uses: ./.github/workflows/validate-pr.yaml
 
-  lint-and-test:
+  lint-test:
     needs: validate-pr
     uses: ./.github/workflows/lint-test.yaml
 
   release:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: lint-and-test
+    needs: lint-test
     uses: ./.github/workflows/release.yaml
