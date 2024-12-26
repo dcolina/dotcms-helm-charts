@@ -25,4 +25,3 @@ serviceAccount:
 service:
   type: ClusterIP
   port: 80
-  
