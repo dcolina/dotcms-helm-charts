@@ -14,11 +14,7 @@ on:
       - main
 
 jobs:
-  validate-pr:
-    uses: ./.github/workflows/validate-pr.yaml
-
   lint-test:
-    needs: validate-pr
     uses: ./.github/workflows/lint-test.yaml
 
   release:
