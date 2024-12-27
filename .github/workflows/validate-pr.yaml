@@ -18,5 +18,5 @@ jobs:
           modified_charts=$(git diff --name-only origin/main -- | grep -c '^charts/')
           if [ "$modified_charts" -ne 1 ]; then
             echo "Only one chart can be modified per PR."
-            # exit 1
+            exit 1
           fi
